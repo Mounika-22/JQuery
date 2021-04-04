@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .S {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+       alert('Hello..!');
+       });
+       $(document).ready(function () {
+        $("#btnAdd").click(function () {
+
+
+            var x = parseInt($("#number1").val());
+
+            var y = parseInt($("#number2").val());
+            $("#result").val(x + y);
+           $("#div1").fadeIn();
+
+
+        });
+            $("#btnSubtract").click(function () {
+
+
+                var x = parseInt($("#number1").val());
+
+                var y = parseInt($("#number2").val());
+                $("#result").val(x - y);
+                $("#div1").fadeIn();
+            });
+            $("#btnMultiply").click(function () {
+
+
+                var x = parseInt($("#number1").val());
+
+                var y = parseInt($("#number2").val());
+                $("#result").val(x * y);
+                $("#div1").fadeIn();
+            });
+            $("#btnDivison").click(function () {
+
+
+                var x = parseInt($("#number1").val());
+
+                var y = parseInt($("#number2").val());
+                $("#result").val(x / y);
+                $("#div1").fadeIn();
+            });
+          $("#btntext").click(function () {
+                var re= ($("#text1").val());
+                alert("Hello "+re);
+              $("#div1").fadeOut();
+            });
+
+        });
+       $(document).ready(function(){
+       $("#number1").css('background-color','yellow');
+           $("#number2").css('background-color','yellow');
+           $("#result").css('background-color','lawngreen');
+            $("#number1").css('foreground-color','blue');
+           $("#number1").css('color','grey');
+           $("#number2").css('color','grey');
+           $("#result").css('color','grey');
+            $("body").css("background-color", "lightgreen");
+           $("p").addClass('S');
+       });
+    </script>
+</head>
+
+<body>
+    <div class="container p-3 my-3 bg-warning text-white">
+        <p>
+            Arthimetic Operations
+        </p>
+    </div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form >
+                    <div class="form-group">
+                        <label for="number1">Enter Number 1: </label>
+                        <input type="number" class="form-control" id="number1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="number2">Enter Number 2: </label>
+                        <input type="number" class="form-control" id="number2">
+                    </div>
+                    <div class="form-group">
+                        <label for="result">Result: </label>
+                        <input type="number" class="form-control" id="result">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" id="btnAdd"> Add </button>
+                    <button type="button" class="btn btn-success" id="btnSub"> Subtract </button>
+                    <button type="button" class="btn btn-primary" id="btnMul"> Multiply </button>
+                    <button type="button" class="btn btn-success" id="btnDiv"> Divison </button>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+            <div class="container p-3 my-3 bg-warning text-white">
+                <form class="form-inline">
+
+                    <label for="text"></label>
+                    <input type="text" id="text1" class="form-control" placeholder="Enter the Name" name="text1">
+
+
+                    <button type="button" class="btn btn-primary" id="btntext">Submit</button>
+
+
+
+                    <div class="container" id="div1" style="background-color:greenyellow;">
+
+                    </div>
+                </form>
+            </div>
+</body>
+
+</html>
